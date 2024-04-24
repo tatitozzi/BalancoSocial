@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Chart</title>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  #chartdiv {
+    width: 100%;
+    height: 700px;
+    font-size: 8pt
+  }
+
+  /**
+   * ---------------------------------------
+   * This demo was created using amCharts 5.
+   * 
+   * For more information visit:
+   * https://www.amcharts.com/
+   * 
+   * Documentation is available at:
+   * https://www.amcharts.com/docs/v5/
+   * ---------------------------------------
+   */
+</style>
+</head>
+<body>
+<div id="chartdiv"></div>
+
+<script>
+  // Create root element
+  var root = am5.Root.new("chartdiv");
+
+  // Set themes
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+
+  // Create chart
+  var chart = root.container.children.push(
+    am5radar.RadarChart.new(root, {
+      panX: false,
+      panY: false,
+      wheelX: "panX",
+      wheelY: "zoomX",
+      innerRadius: am5.percent(40),
+      radius: am5.percent(70),
+      arrangeTooltips: false
+    })
+  );
+
+  // Add cursor
+  var cursor = chart.set("cursor", am5radar.RadarCursor.new(root, {
+    behavior: "zoomX"
+  }));
+
+  cursor.lineY.set("visible", false);
+
+  // Create axes and their renderers
+  var xRenderer = am5radar.AxisRendererCircular.new(root, {
+    minGridDistance: 30
+  });
+  xRenderer.labels.template.setAll({
+    textType: "radial",
+    radius: 10,
+    paddingTop: 0,
+    paddingBottom: 0,
+    centerY: am5.p50,
+    fontSize: "0.8em"
+  });
+
+  xRenderer.grid.template.setAll({
+    location: 0.5,
+    strokeDasharray: [2, 2]
+  });
+
+  var xAxis = chart.xAxes.push(
+    am5xy.CategoryAxis.new(root, {
+      maxDeviation: 0,
+      categoryField: "name",
+      renderer: xRenderer,
+      tooltip: am5.Tooltip.new(root, {})
+    })
+  );
+
+  var yRenderer = am5radar.AxisRendererRadial.new(root, {
+    minGridDistance: 30
+  });
+
+  var yAxis = chart.yAxes.push(
+    am5xy.ValueAxis.new(root, {
+      renderer: yRenderer
+    })
+  );
+
+  yRenderer.grid.template.setAll({
+    strokeDasharray: [2, 2]
+  });
+
+  // Create series
+  var series1 = chart.series.push(
+    am5radar.RadarLineSeries.new(root, {
+      name: "Impacto Ambiental",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value1",
+      categoryXField: "name"
+    })
+  );
+
+  series1.strokes.template.setAll({
+    strokeOpacity: 0
+  });
+
+  series1.fills.template.setAll({
+    visible: true,
+    fillOpacity: 0.5
+  });
+
+  var series2 = chart.series.push(
+    am5radar.RadarLineSeries.new(root, {
+      name: "Impacto Social",
+      xAxis: xAxis,
+      yAxis: yAxis,
+      valueYField: "value2",
+      categoryXField: "name",
+      stacked: true,
+      tooltip: am5.Tooltip.new(root, {
+        labelText: "I Ambiental: {value1}\nI Social:{value2}"
+      })
+    })
+  );
+
+  series2.strokes.template.setAll({
+    strokeOpacity: 0
+  });
+
+  series2.fills.template.setAll({
+    visible: true,
+    fillOpacity: 0.5
+  });
+
+  var legend = chart.radarContainer.children.push(
+    am5.Legend.new(root, {
+      width: 150,
+      centerX: am5.p50,
+      centerY: am5.p50
+    })
+  );
+  legend.data.setAll([series1, series2]);
+
+  // Set data
+  var data = [
+    {
+      name: "Cultivar de ameixa Letícia",
+      value1: 2,
+      value2: 2
+    },
+    {
+      name: "Cultivar de ameixa Fortune",
+      value1: 1,
+      value2: 2
+    },
+    {
+      name: "Cultivar de ameixa SCS410 Piuna",
+      value1: 1,
+      value2: 1
+    },
+    {
+      name: "Cultivar de ameixa SCS438 Zafira",
+      value1: 1,
+      value2: 1
+    },
+    {
+      name: "Cultivar de Alface SCS374 Litorânea",
+      value1: 1,
+      value2: 3
+    },
+    {
+      name: "Desenvolvimento da malacocultura em Santa Catarina",
+      value1: 0,
+      value2: 3
+    },
+    {
+      name: "Melhoramento genético da tilápia GIFT",
+      value1: 1,
+      value2: 3
+    },
+    {
+      name: "Cultivar de arroz irrigado SCSBRS Tio Taka",
+      value1: 2,
+      value2: 4
+    },
+    {
+      name: "Cultivar de arroz irrigado Epagri 108",
+      value1: 2,
+      value2: 4
+    },
+    {
+      name: "Cultivar de arroz irrigado Epagri 109",
+      value1: 2,
+      value2: 4
+    },
+    {
+      name: "Cultivar de arroz irrigado SCS116 Satoru",
+      value1: 2,
+      value2: 4
+    }
+  ];
+
+  series1.data.setAll(data);
+  series2.data.setAll(data);
+  xAxis.data.setAll(data);
+
+  // Animate chart and series in
+  series1.appear(1000);
+  series2.appear(1000);
+  chart.appear(1000, 100);
+</script>
+</body>
+</html>

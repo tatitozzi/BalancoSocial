@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acordeão BS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilo para intercalar as cores das linhas */
+    .accordion-table tbody tr:nth-child(even) {
+      background-color: #98a862;
+    }
+    /* Estilo para as setas */
+    .accordion-arrow::before {
+      content: "\25B8"; /* Seta para baixo */
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .accordion-arrow.collapsed::before {
+      content: "\25BE"; /* Seta para cima */
+    }
+
+ </style>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.collapse').on('show.bs.collapse', function () {
+        $(this).closest('tr').addClass('active-row').siblings().removeClass('active-row');
+        $(this).closest('tr').find('.accordion-arrow').removeClass('collapsed');
+      });
+      $('.collapse').on('hide.bs.collapse', function () {
+        $(this).closest('tr').removeClass('active-row');
+        $(this).closest('tr').find('.accordion-arrow').addClass('collapsed');
+      });
+    });
+  </script>
+</head>
+<body>
+
+<div class="container mt-5">
+  <div id="accordion">
+    <!-- Alface -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Alface
+            <span class="accordion-arrow collapsed"></span>
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <div class="table-responsive"> <!-- Adicionado -->
+            <table class="table accordion-table ">
+              <thead>
+                <tr>
+                  <th scope="col">Tecnologia/Cultivar/Ação</th>
+                  <th scope="col">Impacto Social</th>
+                  <th scope="col">Impacto Ambiental</th>
+                  <th scope="col">Impacto Econômico</th>
+                  <th scope="col"> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="collapse" data-target="#subAccordionOne" aria-expanded="false" aria-controls="subAccordionOne">
+                  <td>Cultivar de Alface SCS374 Litorânea</td>
+                  <td> +++</td>
+                  <td>+</td>
+                  <td>6.403.238,45</td>
+                  <td><span class="accordion-arrow"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="subAccordionOne" class="collapse" data-parent="#collapseOne">
+            <table class="table">
+              <tbody>
+                <img decoding="async" width="1361" height="316" src="https://cepa.epagri.sc.gov.br/wp-content/uploads/2022/12/Banner-Cepa_horizontal.jpg" class="attachment-full size-full wp-image-12788" alt="" srcset="https://cepa.epagri.sc.gov.br/wp-content/uploads/2022/12/Banner-Cepa_horizontal.jpg 1361w, https://cepa.epagri.sc.gov.br/wp-content/uploads/2022/12/Banner-Cepa_horizontal-300x70.jpg 300w, https://cepa.epagri.sc.gov.br/wp-content/uploads/2022/12/Banner-Cepa_horizontal-1024x238.jpg 1024w, https://cepa.epagri.sc.gov.br/wp-content/uploads/2022/12/Banner-Cepa_horizontal-768x178.jpg 768w" sizes="(max-width: 1361px) 100vw, 1361px">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Alface -->
+   
+    <!-- Ameixa -->
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Ameixa
+            <span class="accordion-arrow collapsed"></span>
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+        >>>>>  Gráficos da categoria 
+        <iframe src="grafico-impactos-categoria.html" frameborder="0" style="width: 100%; height: 700px;"></iframe>
+
+        <br>
+          <div class="table-responsive "> <!-- Adicionado -->
+            <table class="table accordion-table ">
+              <thead>
+                <tr>
+                  <th scope="col ">Tecnologia/Cultivar/Ação</th>
+                  <th scope="col">Impacto Social</th>
+                  <th scope="col">Impacto Ambiental</th>
+                  <th scope="col">Impacto Econômico</th>
+                  <th scope="col"> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="collapse" data-target="#subAccordionThree" aria-expanded="false" aria-controls="subAccordionThree">
+                  <td>Cultivar de ameixa Letícia</td>
+                  <td>+++</td>
+                  <td>+</td>
+                  <td>19.921.722,48</td>
+                  <td><span class="accordion-arrow collapsed"></span></td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr data-toggle="collapse" data-target="#subAccordionThree2" aria-expanded="false" aria-controls="subAccordionThree2">
+                  <td>Cultivar de ameixa Fortune</td>
+                  <td>++</td>
+                  <td>+</td>
+                  <td>14.127.096,50</td>
+                  <td><span class="accordion-arrow collapsed"></span></td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr data-toggle="collapse" data-target="#subAccordionThree3" aria-expanded="false" aria-controls="subAccordionThree3">
+                  <td>Cultivar de ameixa SCS410 Piuna</td>
+                  <td>+</td>
+                  <td>+</td>
+                  <td>301.875,00</td>
+                  <td><span class="accordion-arrow collapsed"></span></td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr data-toggle="collapse" data-target="#subAccordionThree4" aria-expanded="false" aria-controls="subAccordionThree4">
+                  <td>Cultivar de ameixa SCS438 Zafira</td>
+                  <td>+</td>
+                  <td>+</td>
+                  <td>103.386,75</td>
+                  <td><span class="accordion-arrow collapsed"></span></td>
+                </tr>
+              </tbody>
+
+            </table>
+          </div>
+          <div id="subAccordionThree" class="collapse" data-parent="#collapseThree">
+            <table class="table">
+              <tbody>
+                <iframe src="grafico-radar.html" frameborder="0" style="width: 100%; height: 700px;"></iframe>
+              </tbody>
+            </table>          
+          </div>
+
+
+          <div id="subAccordionThree2" class="collapse" data-parent="#collapseThree">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>2222</td>
+                </tr>
+              </tbody>
+            </table>          
+          </div>
+
+          <div id="subAccordionThree3" class="collapse" data-parent="#collapseThree">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>333</td>
+                </tr>
+              </tbody>
+            </table>          
+          </div>
+
+          <div id="subAccordionThree4" class="collapse" data-parent="#collapseThree">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>4444</td>
+                </tr>
+              </tbody>
+            </table>          
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Ameixa -->
+
+
+
+
+   <!-- Aquicultura -->
+   <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#substituit" aria-expanded="false" aria-controls="substituit">
+          Aquicultura
+          <span class="accordion-arrow collapsed"></span>
+        </button>
+      </h5>
+    </div>
+    <div id="substituit" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <div class="table-responsive"> <!-- Adicionado -->
+          <table class="table accordion-table">
+            <thead>
+              <tr>
+                <th scope="col">Tecnologia/Cultivar/Ação</th>
+                <th scope="col">Impacto Social</th>
+                <th scope="col">Impacto Ambiental</th>
+                <th scope="col">Impacto Econômico</th>
+                <th scope="col"> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-toggle="collapse" data-target="#subAccordionThree" aria-expanded="false" aria-controls="subAccordionThree">
+                <td>Desenvolvimento da malacocultura em Santa Catarina</td>
+                <td>+++</td>
+                <td>-</td>
+                <td>8.997.521,00</td>
+                <td><span class="accordion-arrow collapsed"></span></td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr data-toggle="collapse" data-target="#subAccordionThree2" aria-expanded="false" aria-controls="subAccordionThree2">
+                <td>Melhoramento genético da tilápia GIFT</td>
+                <td>+++</td>
+                <td>+</td>
+                <td>53.245.982,18</td>
+                <td><span class="accordion-arrow collapsed"></span></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+        <div id="subAccordionThree" class="collapse" data-parent="#substituit">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Detalhes sobre a aquicultura1</td>
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+
+
+        <div id="subAccordionThree2" class="collapse" data-parent="#substituit">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Detalhes sobre a aquicultura2</td>
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Aquicultura -->
+
+
+  </div>
+</div>
+
+</body>
+</html>
