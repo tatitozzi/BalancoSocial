@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acordeão Responsivo</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+ <style>
+    .img-modal {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* centralizar as imagens */
+    }
+ </style>
+</head>
+<body>
+    <div class="container">
+    <div class="accordion" id="accordionExample">
+      <!-- Primeiro acordeão (Alface) -->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse"  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" style="color: #d70909;" class="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                  </svg> Alface
+              </button>
+              
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Impacto econômico atribuído à Epagri (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="collapse" data-target="#collapseSecondary" aria-expanded="false" aria-controls="collapseSecondary">
+                    <td>                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" style="color: #d70909;" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                      </svg>Alface</td>
+                    <td>1</td>
+                    <td>6.462.093,88</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="collapse" id="collapseSecondary">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">% de uso do cultivar na área da cultura</th>
+                    <th scope="col">% atribuído à Epagri no impacto econômico</th>
+                    <th scope="col">Impacto econômico atribuído à Epagri (R$)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-toggle="collapse" data-target="#collapseTertiary" aria-expanded="false" aria-controls="collapseTertiary">
+                    <td>Cultivar de Alface SCS374 Litorânea</td>
+                    <td>19</td>
+                    <td>51</td>
+                    <td>6403238,45</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="collapse" id="collapseTertiary">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Gráficos</th>
+                      <th scope="col"> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="impacto.png" alt="Imagem de Exemplo" class="img-modal"></td> 
+                      <td><img src="area-impactoE.png" alt="Imagem de Exemplo" class="img-modal"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segundo acordeão (Ameixa) -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" style="color: #d70909;" class="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                  </svg> Ameixa
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Impacto econômico atribuído à Epagri (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="collapse" data-target="#collapseSecondaryTwo" aria-expanded="false" aria-controls="collapseSecondaryTwo">
+                    <td>Ameixa</td>
+                    <td>4</td>
+                    <td>34.454.080,73</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="collapse" id="collapseSecondaryTwo">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">% de uso do cultivar na área da cultura</th>
+                    <th scope="col">% atribuído à Epagri no impacto econômico</th>
+                    <th scope="col">Impacto econômico atribuído à Epagri (R$)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-toggle="collapse" data-target="#collapseTertiaryLeticia" aria-expanded="false" aria-controls="collapseTertiaryLeticia">
+                    <td>Cultivar de ameixa Letícia</td>
+                    <td>32</td>
+                    <td>58</td>
+                    <td>19921722,48</td>
+                  </tr>
+                  <tr data-toggle="collapse" data-target="#collapseTertiaryFortune" aria-expanded="false" aria-controls="collapseTertiaryFortune">
+                    <td>Cultivar de ameixa Fortune</td>
+                    <td>60</td>
+                    <td>70</td>
+                    <td>14127096,50</td>
+                  </tr>
+                  <tr data-toggle="collapse" data-target="#collapseTertiaryPiuna" aria-expanded="false" aria-controls="collapseTertiaryPiuna">
+                    <td>Cultivar de ameixa SCS410 Piuna</td>
+                    <td>2</td>
+                    <td>70</td>
+                    <td>301875,00</td>
+                  </tr>
+                  <tr data-toggle="collapse" data-target="#collapseTertiaryZafira" aria-expanded="false" aria-controls="collapseTertiaryZafira">
+                    <td>Cultivar de ameixa SCS438 Zafira</td>
+                    <td>1</td>
+                    <td>70</td>
+                    <td>103386,75</td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <div class="collapse" id="collapseTertiaryLeticia">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Gráficos</th>
+                      <th scope="col"> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="impacto_ameixa_leticia.png" alt="Imagem de Exemplo" class="img-modal"></td> 
+                      <td><img src="area-impactoE_ameixa_leticia.png" alt="Imagem de Exemplo" class="img-modal"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collapse" id="collapseTertiaryFortune">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Gráficos</th>
+                      <th scope="col"> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="impacto_ameixa_fortune.png" alt="Imagem de Exemplo" class="img-modal"></td> 
+                      <td><img src="area-impactoE_ameixa_fortune.png" alt="Imagem de Exemplo" class="img-modal"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collapse" id="collapseTertiaryPiuna">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Gráficos</th>
+                      <th scope="col"> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="impacto_ameixa_piuna.png" alt="Imagem de Exemplo" class="img-modal"></td> 
+                      <td><img src="area-impactoE_ameixa_piuna.png" alt="Imagem de Exemplo" class="img-modal"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="collapse" id="collapseTertiaryZafira">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Gráficos</th>
+                      <th scope="col"> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="impacto_ameixa_zafira.png" alt="Imagem de Exemplo" class="img-modal"></td> 
+                      <td><img src="area-impactoE_ameixa_zafira.png" alt="Imagem de Exemplo" class="img-modal"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>    <img src="impacto-geral.png" alt="Imagem de Exemplo" class="img-modal">
+    <br>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">+ Detalhes</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="" alt="Imagem de Exemplo" id="modalImage" class="img-fluid">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      // Função para alternar entre os ícones de + e -
+      $('.btn-link').click(function(){
+        $(this).find('svg').toggleClass('bi-plus bi-dash-lg');
+        // Fechar os outros acordeões
+        $('.collapse').collapse('hide');
+      });
+
+      // Função para exibir a imagem no modal ao clicar
+      $('.img-modal').on('click', function() {
+        var src = $(this).attr('src');
+        $('#modalImage').attr('src', src);
+        $('#exampleModal').modal('show');
+      });
+    });
+  </script>
+</body>
+</html>

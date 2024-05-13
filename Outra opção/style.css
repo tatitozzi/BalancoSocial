@@ -1,0 +1,79 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.accordion-item {
+    background-color: #ee82ee; /* Deep pink header */
+    color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.6s ease;
+}
+
+thead {
+    background-color: #d35400; /* Pumpkin header */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Light grey for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White for even rows */
+}
+
+
+#accordion-button-1 {
+    background-color: #ee82ee;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.6s ease;
+}
+
+#accordion-button-1:hover, #accordion-button-1:focus {
+    background-color: #dd72dd;
+}
+
+.accordion-content {
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: #f9f9f9;
+}
+
+.accordion-title {
+    font-weight: bold;
+}
