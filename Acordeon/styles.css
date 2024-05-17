@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.accordion-item {
+    background-color: #ee82ee; /* Deep pink header */
+    color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.6s ease;
+}
+
+thead {
+    background-color: #d35400; /* Pumpkin header */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Light grey for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White for even rows */
+}
+
+.accordion-button {
+    background-color: #ee8282;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.6s ease;
+}
+
+.accordion-button:hover, .accordion-button:focus {
+    background-color: #5f1729;
+}
+
+.accordion-content {
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Primary table column widths */
+.primary-table th:nth-child(1), .primary-table td:nth-child(1) {
+    width: 40%; /* Primeira coluna maior */
+}
+
+.primary-table th:nth-child(n+2), .primary-table td:nth-child(n+2) {
+    width: 20%; /* Colunas subsequentes iguais */
+}
+
+/* Secondary table column widths */
+.secondary-table th:nth-child(1), .secondary-table td:nth-child(1) {
+    width: 30%; /* Primeira coluna maior */
+}
+
+.secondary-table th:nth-child(n+2), .secondary-table td:nth-child(n+2) {
+    width: 17.5%; /* Colunas subsequentes iguais */
+}
+
+thead {
+    background-color: #f9f9f9;
+}
+
+.accordion-title {
+    font-weight: bold;
+}
+
+.secondary-table table {
+    margin-top: 10px;
+    background-color: #c7b4b4; /* Light gray background for secondary tables */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    th::before, td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        text-align: left;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    th:first-child, td:first-child {
+        width: 100%;
+    }
+}

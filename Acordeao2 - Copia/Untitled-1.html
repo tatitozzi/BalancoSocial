@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acordeons 2</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const data = [
+        { name: "Maçã", quantidade: 18, impacto: "1.000.508.748,63" },
+        { name: "Pecuária/pastagem", quantidade: 8, impacto: "626.865.379,59" },
+        { name: "Arroz", quantidade: 8, impacto: "577.227.669,34" },
+        { name: "Tecnologias para produção de grãos", quantidade: 3, impacto: "491.453.731,36" },
+        { name: "Banana", quantidade: 5, impacto: "490.539.492,00" },
+        { name: "Cebola", quantidade: 12, impacto: "383.930.217,15" },
+        { name: "Tecnologias ambientais", quantidade: 11, impacto: "252.799.294,39" },
+        { name: "Tecnologias para olericultura", quantidade: 4, impacto: "164.762.423,02" },
+        { name: "Uva/Vinho", quantidade: 16, impacto: "112.571.526,29" },
+        { name: "SPDH", quantidade: 1, impacto: "100.038.800,00" },
+        { name: "Erva-mate", quantidade: 2, impacto: "94.080.475,00" },
+        { name: "Aquicultura", quantidade: 2, impacto: "62.243.503,18" },
+        { name: "Mandioca", quantidade: 4, impacto: "37.857.040,00" },
+        { name: "Maracujá", quantidade: 2, impacto: "34.927.700,00" },
+        { name: "Ameixa", quantidade: 4, impacto: "34.454.080,73" },
+        { name: "Tomate", quantidade: 5, impacto: "25.109.863,25" },
+        { name: "Pêra", quantidade: 1, impacto: "6.462.093,88" },
+        { name: "Alface", quantidade: 1, impacto: "6.403.238,45" },
+        { name: "Apoio ao PNAE", quantidade: 1, impacto: "3.949.859,70" },
+        { name: "Pêssego", quantidade: 3, impacto: "3.220.389,50" },
+        { name: "Batata doce", quantidade: 6, impacto: "2.908.912,20" },
+        { name: "Milho", quantidade: 2, impacto: "2.888.162,20" },
+        { name: "Caqui", quantidade: 1, impacto: "2.723.000,00" },
+        { name: "Mel", quantidade: 1, impacto: "1.335.152,00" },
+        { name: "Feijão", quantidade: 1, impacto: "1.021.650,00" }
+    ];
+
+    const accordionContainer = document.getElementById('accordion-container');
+
+    data.forEach((item, index) => {
+        const accordionItem = document.createElement('div');
+        accordionItem.classList.add('accordion');
+
+        const accordionButton = document.createElement('button');
+        accordionButton.classList.add('accordion-button');
+        accordionButton.setAttribute('aria-expanded', 'false');
+
+        const accordionSymbol = document.createElement('span');
+        accordionSymbol.classList.add('accordion-symbol');
+        accordionSymbol.textContent = '+';
+
+        const accordionTitle = document.createElement('span');
+        accordionTitle.classList.add('accordion-title');
+        accordionTitle.textContent = item.name;
+
+        accordionButton.appendChild(accordionSymbol);
+        accordionButton.appendChild(accordionTitle);
+
+        const accordionContent = document.createElement('div');
+        accordionContent.classList.add('accordion-content');
+
+        const primaryTable = document.createElement('table');
+        primaryTable.id = `primary-table-${index}`;
+        primaryTable.innerHTML = `
+            <thead>
+                <tr>
+                    <th>Grupo</th>
+                    <th>Quantidade</th>
+                    <th>Área plantada (ha)</th>
+                    <th>Impacto econômico atribuído à Epagri (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>${item.name}</td>
+                    <td>${item.quantidade}</td>
+                    <td>${(Math.random() * 1000).toFixed(2)}</td>
+                    <td>${item.impacto}</td>
+                </tr>
+            </tbody>
+        `;
+
+        const secondaryTable = document.createElement('div');
+        secondaryTable.classList.add('secondary-table');
+        secondaryTable.style.display = 'none';
+        secondaryTable.innerHTML = `
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cultivar/Tecnologia/Ação</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto social</th>
+                        <th>Impacto ambiental</th>
+                        <th>Impacto econômico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cultivar de ${item.name}</td>
+                        <td>${(Math.random() * 1000).toFixed(2)}</td>
+                        <td>+++</td>
+                        <td>+</td>
+                        <td>${item.impacto}</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+
+        accordionContent.appendChild(primaryTable);
+        accordionContent.appendChild(secondaryTable);
+
+        accordionItem.appendChild(accordionButton);
+        accordionItem.appendChild(accordionContent);
+
+        accordionContainer.appendChild(accordionItem);
+
+        accordionButton.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            accordionSymbol.textContent = expanded ? '+' : '-';
+            accordionContent.style.maxHeight = expanded ? '0' : accordionContent.scrollHeight + 'px';
+        });
+    });
+});
+</script>
+
+<div id="accordion-container"></div>
+
+</body>
+</html>

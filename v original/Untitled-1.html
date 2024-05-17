@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acordeons 2</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Dynamic Accordion Items -->
+
+<div class="accordion">
+    <!-- Maçã -->
+    <div class="accordion-item">
+        <button id="accordion-button-maca" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Maçã</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maçã</td>
+                        <td>18</td>
+                        <td>1000</td>
+                        <td>1.000.508.748,63</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Maçã XYZ</td>
+                            <td>1000</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>1.000.508.748,63</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pecuária/pastagem -->
+    <div class="accordion-item">
+        <button id="accordion-button-pecuaria" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Pecuária/pastagem</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pecuária/pastagem</td>
+                        <td>8</td>
+                        <td>800</td>
+                        <td>626.865.379,59</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tecnologia de Pecuária XYZ</td>
+                            <td>800</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>626.865.379,59</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arroz -->
+    <div class="accordion-item">
+        <button id="accordion-button-arroz" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Arroz</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Arroz</td>
+                        <td>8</td>
+                        <td>800</td>
+                        <td>577.227.669,34</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Arroz XYZ</td>
+                            <td>800</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>577.227.669,34</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tecnologias para produção de grãos -->
+    <div class="accordion-item">
+        <button id="accordion-button-tecnologias-graos" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Tecnologias para produção de grãos</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tecnologias para produção de grãos</td>
+                        <td>3</td>
+                        <td>300</td>
+                        <td>491.453.731,36</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tecnologia de Grãos XYZ</td>
+                            <td>300</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>491.453.731,36</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banana -->
+    <div class="accordion-item">
+        <button id="accordion-button-banana" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Banana</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Banana</td>
+                        <td>5</td>
+                        <td>500</td>
+                        <td>490.539.492,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Banana XYZ</td>
+                            <td>500</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>490.539.492,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cebola -->
+    <div class="accordion-item">
+        <button id="accordion-button-cebola" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Cebola</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cebola</td>
+                        <td>12</td>
+                        <td>1200</td>
+                        <td>383.930.217,15</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Cebola XYZ</td>
+                            <td>1200</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>383.930.217,15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tecnologias ambientais -->
+    <div class="accordion-item">
+        <button id="accordion-button-tecnologias-ambientais" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Tecnologias ambientais</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tecnologias ambientais</td>
+                        <td>11</td>
+                        <td>1100</td>
+                        <td>252.799.294,39</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tecnologia Ambiental XYZ</td>
+                            <td>1100</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>252.799.294,39</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tecnologias para olericultura -->
+    <div class="accordion-item">
+        <button id="accordion-button-tecnologias-olericultura" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Tecnologias para olericultura</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tecnologias para olericultura</td>
+                        <td>4</td>
+                        <td>400</td>
+                        <td>164.762.423,02</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tecnologia Olericultura XYZ</td>
+                            <td>400</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>164.762.423,02</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Uva/Vinho -->
+    <div class="accordion-item">
+        <button id="accordion-button-uva-vinho" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Uva/Vinho</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Uva/Vinho</td>
+                        <td>16</td>
+                        <td>1600</td>
+                        <td>112.571.526,29</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Uva XYZ</td>
+                            <td>1600</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>112.571.526,29</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPDH -->
+    <div class="accordion-item">
+        <button id="accordion-button-spdh" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">SPDH</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SPDH</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>100.038.800,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tecnologia SPDH XYZ</td>
+                            <td>100</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>100.038.800,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Erva-mate -->
+    <div class="accordion-item">
+        <button id="accordion-button-erva-mate" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Erva-mate</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Erva-mate</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>94.080.475,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Erva-mate XYZ</td>
+                            <td>200</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>94.080.475,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aquicultura -->
+    <div class="accordion-item">
+        <button id="accordion-button-aquicultura" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Aquicultura</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aquicultura</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>62.243.503,18</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tecnologia de Aquicultura XYZ</td>
+                            <td>200</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>62.243.503,18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mandioca -->
+    <div class="accordion-item">
+        <button id="accordion-button-mandioca" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Mandioca</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mandioca</td>
+                        <td>4</td>
+                        <td>400</td>
+                        <td>37.857.040,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Mandioca XYZ</td>
+                            <td>400</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>37.857.040,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Maracujá -->
+    <div class="accordion-item">
+        <button id="accordion-button-maracuja" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Maracujá</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maracujá</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>34.927.700,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Maracujá XYZ</td>
+                            <td>200</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>34.927.700,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ameixa -->
+    <div class="accordion-item">
+        <button id="accordion-button-ameixa" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Ameixa</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ameixa</td>
+                        <td>4</td>
+                        <td>400</td>
+                        <td>34.454.080,73</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Ameixa XYZ</td>
+                            <td>400</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>34.454.080,73</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tomate -->
+    <div class="accordion-item">
+        <button id="accordion-button-tomate" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Tomate</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tomate</td>
+                        <td>5</td>
+                        <td>500</td>
+                        <td>25.109.863,25</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Tomate XYZ</td>
+                            <td>500</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>25.109.863,25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pêra -->
+    <div class="accordion-item">
+        <button id="accordion-button-pera" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Pêra</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pêra</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>6.462.093,88</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Pêra XYZ</td>
+                            <td>100</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>6.462.093,88</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alface -->
+    <div class="accordion-item">
+        <button id="accordion-button-alface" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Alface</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alface</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>6.403.238,45</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Alface XYZ</td>
+                            <td>100</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>6.403.238,45</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apoio ao PNAE -->
+    <div class="accordion-item">
+        <button id="accordion-button-pnae" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Apoio ao PNAE</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apoio ao PNAE</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>3.949.859,70</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tecnologia PNAE XYZ</td>
+                            <td>100</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>3.949.859,70</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pêssego -->
+    <div class="accordion-item">
+        <button id="accordion-button-pessego" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Pêssego</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pêssego</td>
+                        <td>3</td>
+                        <td>300</td>
+                        <td>3.220.389,50</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Pêssego XYZ</td>
+                            <td>300</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>3.220.389,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Batata doce -->
+    <div class="accordion-item">
+        <button id="accordion-button-batata-doce" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Batata doce</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Batata doce</td>
+                        <td>6</td>
+                        <td>600</td>
+                        <td>2.908.912,20</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Batata doce XYZ</td>
+                            <td>600</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>2.908.912,20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Milho -->
+    <div class="accordion-item">
+        <button id="accordion-button-milho" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Milho</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Milho</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>2.888.162,20</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Milho XYZ</td>
+                            <td>200</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>2.888.162,20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caqui -->
+    <div class="accordion-item">
+        <button id="accordion-button-caqui" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Caqui</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Caqui</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>2.723.000,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Caqui XYZ</td>
+                            <td>100</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>2.723.000,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mel -->
+    <div class="accordion-item">
+        <button id="accordion-button-mel" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Mel</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mel</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>1.335.152,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Mel XYZ</td>
+                            <td>100</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>1.335.152,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feijão -->
+    <div class="accordion-item">
+        <button id="accordion-button-feijao" aria-expanded="false" class="accordion-button">
+            <span class="accordion-symbol">+</span>
+            <span class="accordion-title">Feijão</span>
+        </button>
+        <div class="accordion-content">
+            <table id="primary-table">
+                <thead>
+                    <tr>
+                        <th>Grupo</th>
+                        <th>Quantidade</th>
+                        <th>Área plantada (ha)</th>
+                        <th>Impacto econômico atribuído à Epagri (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Feijão</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>1.021.650,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="secondary-table" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cultivar/Tecnologia/Ação</th>
+                            <th>Área plantada (ha)</th>
+                            <th>Impacto social</th>
+                            <th>Impacto ambiental</th>
+                            <th>Impacto econômico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultivar de Feijão XYZ</td>
+                            <td>100</td>
+                            <td>+++</td>
+                            <td>+++</td>
+                            <td>1.021.650,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
