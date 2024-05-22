@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acordeão com Tabela</title>
+<style>
+    .accordion {
+        background-color: #f9f9f9;
+        color: #333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+
+    .active, .accordion:hover {
+        background-color: #ddd;
+    }
+
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+    }
+
+    .panel table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .panel th, .panel td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+
+<h2>Exemplo de Acordeão com Tabela</h2>
+
+<button class="accordion">Grupo	Quantidade	Área plantada (ha)	Impacto econômico atribuído à Epagri (R$)</button>
+<div class="panel">
+    <table>
+        <tr>
+            <th>Grupo</th>
+            <th>Quantidade</th>
+            <th>Área plantada (ha)</th>
+            <th>Impacto econômico atribuído à Epagri (R$)</th>
+        </tr>
+        <tr>
+            <td>Grupo 1</td>
+            <td>100</td>
+            <td>500</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td>Grupo 2</td>
+            <td>150</td>
+            <td>750</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>Grupo 3</td>
+            <td>200</td>
+            <td>1000</td>
+            <td>20000</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
