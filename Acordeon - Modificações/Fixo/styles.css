@@ -2,87 +2,66 @@ body {
     font-family: Arial, sans-serif;
     padding: 20px;
     background-color: #f4f4f4;
+    overflow-x: auto;
 }
 
 /* Estilo para o cabeçalho fixo */
 .thead01 {
     position: fixed;
     top: 0;
-    left: 10;
+    left: 0;
     right: 0;
-    z-index: 1; /* Garantir que o cabeçalho fique acima do conteúdo da tabela */
-    width: 100%; /* Manter a largura do cabeçalho igual à da tabela */
-    background-color: #fff; /* Definir a cor de fundo do cabeçalho */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar uma sombra sutil */
-    background-color: #051b07; /* Cor do cabeçalho */
-    padding: 20px;
-
-  }
-  
-  #primary-table thead.thead01 {
-    position: fixed;
-    top: 0;
-    left: 10px;
-    right: 10px;
+    bottom: 20px;
     z-index: 1;
-    width: calc(100% - 20px);
-    background-color: #042707;
-    padding: 20px;
-    color: #f4f4f4;
+    background-color: #068d35;
+    color: #3a0303;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding: 20px;
+}
+
+/* Adicionar margem ao conteúdo da tabela para evitar sobreposição pelo cabeçalho fixo */
+#primary-table {
+    background-color: #068d35;
+    padding-top: 34px;
 }
 
 .accordion {
     width: 100%;
-    max-width: 1000px;
     margin: auto;
     box-shadow: 0 2px 5px rgba(173, 27, 27, 0.2);
 }
 
-
-.destaque{
+.destaque {
     font-weight: 600;
     margin: auto;
     color: rgb(0, 0, 0);
 }
 
 .linha {
-    padding: 8px;
+    padding: 80px;
     border-bottom: 10px solid #7e1313;
 }
-/* .accordion-item {
-    background-color: #ee82ee; 
-    color: white;
-    border: none;
-    outline: none;
-    width: 100%;
-    text-align: left;
-    font-weight: normal;
-    transition: background-color 0.6s ease;
-} */
-
-
 
 thead {
-    background-color: #068d35; /* Pumpkin header */
+    padding: auto;
+    background-color: #03742a;
     color: #fff;
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #f2f2f2; /* Light grey for odd rows */
+    background-color: #f2f2f2;
     cursor: pointer;
     transition: background-color 0.6s ease;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #cce9d9; /* White for even rows */
+    background-color: #cce9d9;
 }
 
 .accordion-button {
     background-color: #227429;
     color: white;
-    /* cursor: pointer; */
     padding: 1px;
     width: 100%;
     border: none;
@@ -90,10 +69,8 @@ tbody tr:nth-child(even) {
     outline: none;
     font-size: 15px;
     transition: background-color 0.6s ease;
-
 }
 
-/*Hover acordeon*/
 .accordion-button:hover, .accordion-button:focus {
     background-color: #176d1e;
 }
@@ -108,16 +85,21 @@ tbody tr:nth-child(even) {
 table {
     width: 100%;
     border-collapse: collapse;
-    
+
 }
 
+/* Ajustar o preenchimento das células para coincidir com o cabeçalho */
 th, td {
-    padding: 12px;
-    padding-top: 2;
-    border-bottom: 0px solid #6e2323;
-}
-
-
+    padding-top: 10px; /* Ajustar preenchimento superior */
+    padding-bottom: 10px; /* Ajustar preenchimento inferior */
+    padding-left: 10px; /* Ajustar preenchimento à esquerda */
+  }
+  
+  /* Remover a sobreposição do conteúdo da tabela pelo cabeçalho fixo */
+  #primary-table tr:first-child th, #primary-table tr:first-child td {
+    margin-top: 20px; /* Altura do cabeçalho fixo */
+  }
+  
 
 /* Centralizar conteúdo */
 .centralizado {
@@ -131,42 +113,54 @@ th, td {
     width: 40%;
     padding-left: 20px;
 }
-/* 
-thead {
-    background-color: #083f05;
-    color: #f2f2f2;
-} */
 
 .accordion-title {
     font-weight: lighter;
 }
 
 .secondary-table table {
-    margin-top: 1px;
-    background-color: #c7b4b4; /* Light gray background for secondary tables */
+    margin-top: 10px;
+    background-color: #c7b4b4;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow-x: auto;
+    display: block; /* Added for horizontal overflow handling */
+
 }
-
-
 
 /* Responsive design */
 @media screen and (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
+
+
+    thead {
+        padding-bottom: 10px;
     }
 
+    br {
+    padding-top: 60px;        
+    padding-bottom: 120px;
+    position: fixed;
+    }
+
+    table{
+        overflow-x: auto
+    }
+    
     th, td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
+        margin-top: 10px;
+        text-align: left;
+        padding-left: 10px;
+        position: sticky;
+        overflow-x: auto
+
     }
 
+    
     th::before, td::before {
         content: attr(data-label);
         position: absolute;
         left: 0;
-        width: 50%;
-        padding-left: 10px;
+        width: 30%;
+        padding-left: 05px;
         text-align: left;
         font-weight: bold;
         white-space: nowrap;
@@ -177,17 +171,39 @@ thead {
         padding-bottom: 10px;
     }
 
-    thead {
-        display: block;
-    } 
-
-    tr {
-        margin-bottom: 10px;
-    }
-
     th:first-child, td:first-child {
-        width: 100%;
+        width: 80px;
+        
     }
 
+    /* Ajustar a coluna "Grupo" */
+    .grupo {
+        text-align: left;
+        padding-right: 60px;
+    }
+
+    /* Centralizar conteúdo */
+    .centralizado {
+      text-align: center;
+      padding-right: 10px;
+      padding-left: 20px;
+      width: 10px;
+
+    }
+
+    /* Ajustar margens das tabelas secundárias */
+    .secondary-table table {
+        margin-top: 10px;
+    }
+ }
     
-}
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
