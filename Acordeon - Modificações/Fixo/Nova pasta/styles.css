@@ -11,7 +11,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 20px;
     z-index: 1;
     background-color: #068d35;
     color: #3a0303;
@@ -45,11 +45,8 @@ body {
 
 thead {
     padding: auto;
-    padding-bottom: 30px;
     background-color: #03742a;
     color: #fff;
-    border-right: 160px;
-
 }
 
 tbody tr:nth-child(odd) {
@@ -104,28 +101,18 @@ th, td {
   }
   
 
-/* No centro */
+/* Centralizar conteúdo */
 .centralizado {
     text-align: center;
-    width: 30%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 20%;
 }
 
-/* A esquerda */
+/* Ajustar a coluna "Grupo" */
 .grupo {
     text-align: left;
-    width: 30%;
-    padding-left: 40px;
+    width: 40%;
+    padding-left: 20px;
 }
-
-/* A direita */
-.direita {
-    text-align: right;
-    width: 30%;    
-    padding-right: 50px;
-}
-
 
 .accordion-title {
     font-weight: lighter;
