@@ -18,6 +18,9 @@ body {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
+    width: auto; 
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 /* Adicionar margem ao conteúdo da tabela para evitar sobreposição pelo cabeçalho fixo */
@@ -145,26 +148,26 @@ th, td {
 
 
     thead {
-        padding-bottom: 10px;
+        padding-bottom: 1px;
     }
 
     br {
     padding-top: 60px;        
     padding-bottom: 120px;
     position: fixed;
+    margin-top: 100px;
     }
 
     table{
-        overflow-x: auto
+        overflow-x: auto;
     }
     
     th, td {
-        margin-top: 10px;
+        margin-top: 0px;
         text-align: left;
         padding-left: 10px;
         position: sticky;
-        overflow-x: auto
-
+        overflow-x: auto;
     }
 
     
@@ -173,40 +176,52 @@ th, td {
         position: absolute;
         left: 0;
         width: 30%;
-        padding-left: 05px;
+        padding-left: 0 px;
         text-align: left;
         font-weight: bold;
         white-space: nowrap;
     }
-
-    th, td {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
+ 
     th:first-child, td:first-child {
-        width: 80px;
-        
+        padding-top:10px;
+        margin-top: 25px;
+        width: 10px;
     }
 
-    /* Ajustar a coluna "Grupo" */
+/* A esquerda */
     .grupo {
         text-align: left;
-        padding-right: 60px;
-    }
+        width: 20%;
+        padding-left: 10px;
+        padding-right: 05px;
+        padding-inline: 25px;
+        vertical-align: middle;
+        }
 
-    /* Centralizar conteúdo */
+
+    /* No centro */
     .centralizado {
       text-align: center;
-      padding-right: 10px;
-      padding-left: 20px;
-      width: 10px;
+      padding-right: 35px;
+      padding-left: 10px;
+      padding-inline: 25px;
+      width: 20%;
+      vertical-align: middle;
 
+    }
+
+    /* A direita */
+    .direita {
+   text-align: right;
+   width: 30%;    
+   padding-right: 20px;
+   vertical-align: middle;
     }
 
     /* Ajustar margens das tabelas secundárias */
     .secondary-table table {
-        margin-top: 10px;
+        margin-top: 1px;
+
     }
  }
     
