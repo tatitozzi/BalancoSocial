@@ -192,9 +192,8 @@ th, td {
     .grupo {
         text-align: left;
         width: 20%;
-        padding-left: 10px;
-        padding-right: 05px;
-        padding-inline: 25px;
+        padding-left: 20px;
+        padding-right: 50px;
         vertical-align: middle;
         }
 
@@ -202,10 +201,9 @@ th, td {
     /* No centro */
     .centralizado {
       text-align: center;
-      padding-right: 35px;
-      padding-left: 10px;
-      padding-inline: 25px;
-      width: 20%;
+      padding-right: 20px;
+      padding-left: 20px;
+      width: 5%;
       vertical-align: middle;
 
     }
@@ -213,8 +211,9 @@ th, td {
     /* A direita */
     .direita {
    text-align: right;
-   width: 30%;    
-   padding-right: 20px;
+   width: 40%;    
+   padding-left: 20px;
+   padding-right: 15px;
    vertical-align: middle;
     }
 
